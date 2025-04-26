@@ -1,15 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coutry Project</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./css/style.css" />
+        <title>Global Explorer - Country Information</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-logo">
+                    <i class="fas fa-globe-americas"></i>
+                    <span>Global Explorer</span>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <section class="search-section">
+                <h1 class="search-title">
+                    Discover Countries Around the World
+                </h1>
+                <form class="search-form" id="search-form">
+                    <input
+                        type="text"
+                        id="country-input"
+                        class="search-input"
+                        placeholder="Enter a country name..."
+                        required
+                    />
+                    <button type="submit" class="search-button">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </form>
+            </section>
 
-    <input value="Bangladesh" type="text" id="search-inpt">
-    <button type="button" id="search-btn">Search</button>
+            <div class="loader" id="loader">
+                <i class="fas fa-circle-notch"></i>
+            </div>
 
-</body>
-<script src="./js/input-handler.js"></script>
+            <div class="error-message" id="error-message">
+                Country not found. Please try another search.
+            </div>
+
+            <div class="country-results" id="country-results"></div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3 class="footer-title">Global Explorer</h3>
+                    <p>
+                        Your comprehensive guide to countries around the world.
+                        Explore nations, their cultures, weather, and essential
+                        information.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"
+                            ><i class="fab fa-facebook-f"></i
+                        ></a>
+                        <a href="#" class="social-icon"
+                            ><i class="fab fa-twitter"></i
+                        ></a>
+                        <a href="#" class="social-icon"
+                            ><i class="fab fa-instagram"></i
+                        ></a>
+                        <a href="#" class="social-icon"
+                            ><i class="fab fa-linkedin-in"></i
+                        ></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <div class="footer-links">
+                        <a href="#"
+                            ><i class="fas fa-envelope"></i>
+                            joynobazmeer@gmail.com</a
+                        >
+                        <a href="#"
+                            ><i class="fas fa-phone"></i> +880 17 12345678</a
+                        >
+                        <a href="#"
+                            ><i class="fas fa-map-marker-alt"></i> Independent
+                            University, Bangladesh Plot 16, Block B, Aftabuddin
+                            Ahmed Road Bashundhara Residential Area, Dhaka 1245
+                            Bangladesh</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script src="./js/api.js"></script>
+    <script src="./js/index.js"></script>
 </html>

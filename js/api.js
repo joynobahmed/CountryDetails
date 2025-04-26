@@ -1,6 +1,3 @@
-const searchBtn = document.getElementById("search-btn");
-const searchInpt = document.getElementById("search-inpt");
-
 async function getCountryData(countryName) {
     const result = await fetch(
         `https://restcountries.com/v3.1/name/${countryName}?fullText=true`
@@ -46,13 +43,3 @@ async function getWeatherData(countryName) {
         };
     }
 }
-
-async function handleSearchBtnClick() {
-    const countryName = searchInpt.value.trim().toLowerCase();
-    const countryData = await getCountryData(countryName);
-    const weatherData = await getWeatherData(countryName);
-    console.log(countryData);
-    console.log(weatherData);
-}
-
-searchBtn.addEventListener("click", handleSearchBtnClick);
